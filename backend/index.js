@@ -8,11 +8,13 @@ const chatRoutes=require('./routes/chatRoutes')
 const messageRoutes=require('./routes/messageRoutes')
 const notificationRoutes=require('./routes/notificationRoutes')
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware")
+const cors=require('cors')
 
 
 
 dotenv.config()
 connectDB()
+app.use(cors())
 const app=express()
 
 app.use(express.json()) //to accept json data
@@ -34,7 +36,7 @@ const server=app.listen(PORT,console.log(`Server started in port ${PORT}`.yellow
 const io=require('socket.io')(server,{
     pingTimeout:60000,
     cors:{
-        origin:"http://localhost:3000"
+        origin:"https://mern-live-chat-bbwdtpd1p-akshay-vrs-projects.vercel.app"
     }
 })
 io.on("connection",(socket)=>{
