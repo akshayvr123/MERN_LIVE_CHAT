@@ -37,7 +37,7 @@ const server=app.listen(PORT,console.log(`Server started in port ${PORT}`.yellow
 const io=require('socket.io')(server,{
     pingTimeout:60000,
     cors:{
-        origin:"https://mern-live-chat-bbwdtpd1p-akshay-vrs-projects.vercel.app"
+        origin:"http://localhost:3000"
     }
 })
 io.on("connection",(socket)=>{
