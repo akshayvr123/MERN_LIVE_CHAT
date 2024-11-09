@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon backend/server.js"
+    "start": "nodemon index.js"
   },
   "author": "Akshay Vr",
   "license": "ISC",
