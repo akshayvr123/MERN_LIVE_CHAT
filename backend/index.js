@@ -36,10 +36,11 @@ const server=app.listen(PORT,console.log(`Server started in port ${PORT}`.yellow
 
 const io=require('socket.io')(server,{
     pingTimeout:60000,
-    cors:{
-        origin:"*",
-        
-    }
+    cors: {
+        origin: "http://localhost:3000",
+        methods: ["GET", "POST"],
+        credentials: true,
+    },
 })
 io.on("connection",(socket)=>{
     console.log("Connected to socket.io");
