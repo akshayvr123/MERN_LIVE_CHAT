@@ -16,12 +16,12 @@ dotenv.config()
 connectDB()
 
 const app=express()
-
 app.use(cors({
     origin: "http://localhost:3000", // Replace with your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
     credentials: true, // Allow cookies
 }));
+app.options('*', cors());
 
 app.use(express.json()) //to accept json data
 app.get('/',(req,res)=>{
