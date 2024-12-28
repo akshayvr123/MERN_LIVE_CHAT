@@ -31,7 +31,7 @@ app.use('/api/user',userRoutes)
 app.use('/api/chat',chatRoutes)
 app.use('/api/messages',messageRoutes)
 app.use('/api/notification',notificationRoutes)
-app.use(notFound)
+// app.use(notFound)
 app.use(errorHandler)
 
 const PORT=process.env.PORT || 5000
