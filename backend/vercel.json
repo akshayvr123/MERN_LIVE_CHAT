@@ -18,6 +18,16 @@
       }
     },
     {
+      "src": "/socket.io/(.*)",   
+      "dest": "index.js",
+      "methods": ["GET", "POST", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://live-chat-frontend-hazel.vercel.app",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
+    },
+    {
       "src": "/(.*)",       
       "dest": "/"     
     }      
