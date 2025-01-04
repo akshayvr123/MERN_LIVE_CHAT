@@ -49,7 +49,7 @@ const server=app.listen(PORT,console.log(`Server started in port ${PORT}`.yellow
 const io=require('socket.io')(server,{
     pingTimeout:60000,
     cors: {
-        origin: "https://live-chat-frontend-tev1jv35w-akshay-vrs-projects.vercel.app",
+        origin: "https://live-chat-frontend-hazel.vercel.app",
         methods: ["GET", "POST"],
         credentials: true,
     },
