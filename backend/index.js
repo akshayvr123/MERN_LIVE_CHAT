@@ -17,7 +17,7 @@ connectDB()
 
 const app=express()
 app.use(cors({
-    origin: "http://localhost:3000", // Replace with your frontend URL
+    origin: "https://live-chat-frontend-tev1jv35w-akshay-vrs-projects.vercel.app", // Replace with your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
     credentials: true, // Allow cookies
 }));
@@ -42,7 +42,7 @@ const server=app.listen(PORT,console.log(`Server started in port ${PORT}`.yellow
 const io=require('socket.io')(server,{
     pingTimeout:60000,
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://live-chat-frontend-tev1jv35w-akshay-vrs-projects.vercel.app",
         methods: ["GET", "POST"],
         credentials: true,
     },
