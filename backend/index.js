@@ -16,11 +16,12 @@ dotenv.config()
 connectDB()
 
 const app=express()
-app.use(cors({
-    origin: "https://live-chat-frontend-tev1jv35w-akshay-vrs-projects.vercel.app", // Replace with your frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
-    credentials: true, // Allow cookies
-}));
+app.use(cors())
+// app.use(cors({
+//     origin: "https://live-chat-frontend-tev1jv35w-akshay-vrs-projects.vercel.app", // Replace with your frontend URL
+//     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
+//     credentials: true, // Allow cookies
+// }));
 app.options('*', cors());
 
 app.use(express.json()) //to accept json data
